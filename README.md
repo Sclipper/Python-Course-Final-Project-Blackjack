@@ -8,3 +8,6 @@ There was a requirement that the player should chose to be either a dealer or a 
 I did not implement that, because the dealer's actions are set in stone and it won't be fun for the player.
 Instead i have added a choice of how many decks would the player want in the game and tips from ["Basic Strategy"](https://www.gamblingpedia.org/blackjack-strategy/).
 
+In case the dealer does not have cards when u start the game, just restart it nad all will be fine.
+I noticed that python needs to create itself a cache foulder in order to run properly.
+
