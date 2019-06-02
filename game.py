@@ -25,6 +25,8 @@ class GameInit:
         self.play()
 
     def play(self):
+
+                # Main game loop. Even i cant read it anymore :D
         while self.playerComunication(text.playP, text.playI) != 'no' and self.playerCredit != 0:
             self.resetGameState()
             self.bet = self.playerComunication('', text.layBetsI)
@@ -66,7 +68,7 @@ class GameInit:
                 self.getRandomCards('dealer',1)
         self.drawBoard()
     
-    # Draws a random card from the remaning deck
+            # Draws a random card from the remaning deck
     def getRandomCards(self, owner, amount):
         arr =[]
         for i in range(amount):
@@ -83,6 +85,7 @@ class GameInit:
         for i in range(len(arr)):
             self.allCards[owner].append(deck[arr[i]]) 
 
+            # Draws the board. Uses allCards {[]}
     def drawBoard(self):
         clear()
         print('Dealer cards')
@@ -99,11 +102,14 @@ class GameInit:
         print(f'   Total points: {total}')
         print(f'   \nBet: {self.bet}   Credits: {self.playerCredit}')
 
+            # Takes text and input and returns player's response
+            # Text is nto required
     def playerComunication(self, text, playerResponse):
         if text != '':
             print(text)
         return input(playerResponse)
 
+            ## Seta all the variables to their initial state when game cycle ends
     def resetGameState(self): 
         self.allCards = {"player": [], "dealer": []}
         self.bet = 0
